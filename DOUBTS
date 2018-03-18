@@ -1,0 +1,27 @@
+OPEN )
+---------
+
+(D) "Note that the state is not encoded in the block in any way; it is purely an abstraction to be remembered by the validating node and can only be (securely) computed for any block by starting from the genesis state and sequentially applying every transaction in every block"
+    - Doesn't this slow down the validation for every node in the blockchain ??
+
+- (D) Given that addresses are not sparse in the blockchain, cant the user just do a sequential increment of private addresses and see the corresponding public HASH reflected somewhere in the blockchain ?? Is the space really taht sparse ? Same question for bitcoin as well ?
+
+- (D) How is the blockchain target time maintained ? Apart from the time taken to actually sign the block with teh correct nonce, you have to contend with new blocks coming all the time, new transactions coming in, etc ...
+
+(D) BIG open question -> Given that the entire blockchain transaction processing is a peer to peer network, who and which module decides exactly node will process the transaction ? When you start mining, is there a gigantic transaction list and you can read from it ???
+
+(D)- Looks like partial execution of the code in smart contracts is also possible. How do we detect this? How do we detect that everythig was done ?? Also, isn't this a huge security hole ??
+
+Reg Section 2) - 
+    (D)  What is the lifetime of the ganache blockchain ?? Is it stored anywhere ? How long does it persist for ?
+    (D) Using Web3's call API, can you get the bytecode and reconstruct javascript code from that ??
+
+(D) Is there a limit to the size of the code/amount of memory that a given address can consume on the blockchain/or that can be included in every transaction ??
+
+(D)   
+CLOSED )
+---------
+(D) Is there a one to one correspondance between the ethereum network and the blockchain ??
+Ans) Yeah..each test network has its own blockchain...Mining of these
+test networks is done by a different set of experimental nodes
+

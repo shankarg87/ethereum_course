@@ -1,0 +1,55 @@
+Quotes
+--------
+"The development process of a ÐApp often entails a Whitepaper and a working prototype, a token sale, an initial coin offering (ICO), its implementation and launch."
+
+- "The main difference between Ethereum and Bitcoin with regard to the blockchain architecture is that, unlike Bitcoin, Ethereum blocks contain a copy of both the transaction list and the most recent state"
+
+- Author claims that a bulk of the time for building Ether applications is not in the Solidity contract, but in building the HTML and CSS needed for solidity to run properly
+
+Notes
+-----
+Reg Ethereum :
+
+(N)- The main difference between Ethereum and Bitcoin with regard to the blockchain architecture is that, unlike Bitcoin, Ethereum blocks contain a copy of both the transaction list and the most recent state
+
+(N) - There are several different test networks for ethereum. Then there is the main network !
+
+(N) - External ethereum addresses are the same across all the different networks. Contract addresses are very specific to the test network or the main network 
+
+(N)- Note, what is contained in every ethereum transaction     (nonce, to , value, gasPrice, startGas, v.r.s (Outputs of private key and the signature algorithm)
+
+(N) - The way the ethereum network (and a lot of modern crypto networks) keep their block time below something is by adjusting the POW difficulty target. This must be encoded in the rules of the network. Bitcoin does this but not at thegranularity of the ethereum network !
+
+(N) - One of the outputs of the sol compiler is the bytecode which is actually stored in the ethereum network. The other output is the ABI, which in essence is a json string that allows you the ability to build the transactions that you want (the API will translate the Java script code into the SOL bytecode and create a transaction with it)
+ In short, ABI translates between Java script code into the sol code
+
+(N) -Given that the contract executes at an address and multiple people can invoke its public API, how do you avoid race conditions. This is needed for the contract validation to happen.
+
+(N) - Any transaction that writes into the blockchain costs gas. In the transaction, you specify the max gas and the wei per gas for everything
+
+(N) - SOME IMPORTANT TOOLS, 
+    Remix is used to test solidity contracts, to get a basic idea of how solidity contracts wwould work
+   Ganache allows you to implement a peer to peer network and blockchain locally
+   Metamix is a browser extension that allows you to interact with DAPPS on the internet. 
+   It is also a really neat way for you to generate new Ethereum accounts 
+   web3 is the single interface that allows you to send transactions into the ethereum 
+    network. A lot of development is going on here. web3 is also used for other
+    cryptocurrencies as well
+    web3 is written in java script. Using it requires the Node.js environment. 
+    Mocha is the testing framework that is used to test packets
+
+(N) From web3, if you want to talk to an existing contract, you need its address and 
+    its bytecode to send the appropriate transaction
+
+(N) Use remix debugging for everything..   
+
+(N) Before you can send transactions using the web3 API, you still need the contracts ABI. 
+This is something that you can apparently derive from the bytecode..
+
+Reg Solidity
+(N) - We cannot retrieve or send nested dynamic arrays between Solskript and java script
+ There is some interop problem there. Cannot transfer arrays of strings to javascript
+    
+(N) Its tough to generate random numbers in solidity contracts
+(N) Look up function modifiers as a cool way to modify your functions in order to avoid
+writing more code 
